@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Billing System</title>
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon Added -->
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            padding: 50px;
+            color: white;
+            transition: background 0.3s ease-in-out;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background: #121212;
+            color: white;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .toggle-btn:hover {
+            background: #0056b3;
+        }
+
+        /* Contact Icons - Positioned to Top Right */
+        .contact-section {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 15px;
+            border-radius: 10px;
+        }
+
+        .contact-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .contact-icons a img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .contact-icons a img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Container Card */
+        .container {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Heading */
+        h1 {
+            color: #1e3c72;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        /* Description */
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s ease-in-out;
+        }
+
+        .btn.customer {
+            background: #007bff;
+        }
+
+        .btn.customer:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .btn.admin {
+            background: #28a745;
+        }
+
+        .btn.admin:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* About Us Section */
+        .about-us {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-us h2 {
+            color: #1e3c72;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <!-- Contact Us Section - Top Right -->
+    <div class="contact-section">
+        <span>Contact Us:</span>
+        <div class="contact-icons">
+            <a href="https://www.instagram.com/yourprofile" target="_blank">
+                <img src="insta.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/yourwhatsappnumber" target="_blank">
+                <img src="whats.png" alt="WhatsApp">
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>💧 Water Billing System</h1>
+        <p>Manage your water bills with ease and efficiency.</p>
+        <a href="customer_login.php" class="btn customer">🚰 Customer Login</a>
+        <a href="admin_login.php" class="btn admin">👨‍💼 Admin Login</a>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>
+            The Water Billing System is designed to provide a seamless and efficient way for customers to 
+            manage their water bills. Our system allows users to track their water consumption, view bill 
+            details. We strive to ensure accuracy and transparency in billing, 
+            making water management effortless for both customers and administrators.
+        </p>
+    </div>
+
+    <p class="footer">&copy; 2025 Water Billing System | Designed for Efficiency</p>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
